@@ -279,6 +279,17 @@ CREATE TABLE `test` (
 
 insert  into `test`(`id`,`name`) values (2,'ssss'),(4,'ssss'),(6,'ssss'),(8,'ssss'),(8,'ssss'),(12,'ssss');
 
+
+DROP TABLE IF EXISTS `MYCAT_SEQUENCE`;
+
+create table `MYCAT_SEQUENCE` (
+	`name` varchar (150),
+	`current_value` int (11),
+	`increment` int (11)
+); 
+insert into `MYCAT_SEQUENCE` (`name`, `current_value`, `increment`) values('mycat','201','100');
+
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
